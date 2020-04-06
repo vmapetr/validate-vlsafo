@@ -10,6 +10,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Delete ndk
+      run: |
+        rm -rf $ANDROID_HOME/ndk-bundle
+        ls $ANDROID_HOME
+        echo "-------"
+        sudo $ANDROID_HOME/tools/bin/sdkmanager --list
 
     - name: Install latest ndk
       run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk-bundle"
