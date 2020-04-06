@@ -11,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install ndk 20.0.5594570
-      run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk;20.0.5594570"
+    - name: Install latest ndk
+      run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk-bundle"
 
     - name: sdkmanager --list
       run: |
