@@ -11,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install cmake 3.10
-      run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk;18.1.5063045"
+    - name: Install ndk 20.0.5594570
+      run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk;20.0.5594570"
 
     - name: sdkmanager --list
       run: |
