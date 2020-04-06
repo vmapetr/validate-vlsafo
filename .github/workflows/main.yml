@@ -13,7 +13,7 @@ jobs:
     
     - name: Delete ndk
       run: |
-        rm -rf $ANDROID_HOME/ndk-bundle
+        sudo rm -rf $ANDROID_HOME/ndk-bundle
         ls $ANDROID_HOME
         echo "-------"
         sudo $ANDROID_HOME/tools/bin/sdkmanager --list
