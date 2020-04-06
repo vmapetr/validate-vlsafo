@@ -16,4 +16,4 @@ jobs:
 
     - name: sdkmanager --list
       run: |
-        $ANDROID_HOME/tools/bin/sdkmanager --list
+        sudo $ANDROID_HOME/tools/bin/sdkmanager --list
