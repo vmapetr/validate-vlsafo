@@ -13,4 +13,4 @@ jobs:
     
     - name: Test MSYS2
       run: |
-        where.exe make.exe
+        ls "C:\ProgramData\Chocolatey\bin"
