@@ -13,4 +13,4 @@ jobs:
     
     - name: Test MSYS2
       run: |
-        ls "C:\msys64"
+        where.exe make.exe
