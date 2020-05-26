@@ -6,21 +6,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: Delete ndk
+    - name: Test MSYS2
       run: |
-        sudo rm -rf $ANDROID_HOME/ndk-bundle
-        ls $ANDROID_HOME
-        echo "-------"
-        sudo $ANDROID_HOME/tools/bin/sdkmanager --list
-
-    - name: Install latest ndk
-      run: echo "y" | sudo $ANDROID_HOME/tools/bin/sdkmanager "ndk-bundle"
-
-    - name: sdkmanager --list
-      run: |
-        sudo $ANDROID_HOME/tools/bin/sdkmanager --list
+        ls "C:\msys64"
