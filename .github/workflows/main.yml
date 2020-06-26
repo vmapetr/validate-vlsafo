@@ -23,12 +23,10 @@ jobs:
         
     - name: Install sdk and runtime
       run: |
-        sudo bash ./dotnet-install.sh --version 2.1.202 --verbose
+        sudo apt-get install dotnet-sdk-2.1.202
     
     - name: Show dotnet sdks and runtimes
       run: |
-        export PATH="$PATH:$HOME/.dotnet"
-        env
         dotnet --version
         dotnet --list-sdks
         dotnet --list-runtimes
