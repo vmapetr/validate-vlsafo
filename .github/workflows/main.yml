@@ -1,4 +1,4 @@
-name: Test sdkmanager
+name: Test
 
 on:
   push:
@@ -13,6 +13,4 @@ jobs:
     
     - name: Test
       run: |
-        m4 --version
-        flex --version
-        bison --version
+        env
