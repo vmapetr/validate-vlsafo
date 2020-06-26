@@ -22,7 +22,8 @@ jobs:
         
     - name: Install sdk and runtime
       run: |
-        bash ./dotnet-install.sh --version 2.1.202 --verbose
+        kill dotnet
+        bash ./dotnet-install.sh --version 2.1.202 --install-dir /usr/share/dotnet --verbose
     
     - name: Show dotnet sdks and runtimes
       run: |
@@ -31,7 +32,7 @@ jobs:
         dotnet --list-runtimes
         
     - name: ls
-      run: ls /usr/bin
+      run: ls /usr/share/dotnet/sdk
     
     - name: env
       run: env
