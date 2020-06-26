@@ -25,4 +25,4 @@ jobs:
         dotnet --list-runtimes
         
     - name: ls
-      run: ls /usr/share/dotnet/sdk
+      run: ls /home/runner/.dotnet
