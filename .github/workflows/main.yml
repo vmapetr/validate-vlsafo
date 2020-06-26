@@ -24,7 +24,7 @@ jobs:
     - name: Install sdk and runtime
       run: |
         sudo apt-get install dotnet-sdk-2.1.202
-        sudo apt-get install dotnet-runtime-2.0.8
+        sudo apt-get install dotnet-runtime-2.0.9
     
     - name: Show dotnet sdks and runtimes
       run: |
