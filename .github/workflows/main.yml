@@ -6,13 +6,13 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: ls
-      run: ls ~/.dotnet
+    - name: which dotnet
+      run: which dotnet
     
     - name: Show dotnet sdks and runtimes
       run: |
