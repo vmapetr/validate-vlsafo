@@ -13,4 +13,6 @@ jobs:
     
     - name: Test
       run: |
-        dotnet --version --list-runtimes --list-sdks
+        dotnet --version
+        dotnet --list-runtimes
+        dotnet --list-sdks
