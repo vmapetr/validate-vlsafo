@@ -11,8 +11,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Test
+    - name: Show dotnet sdks and runtimes
       run: |
-        dotnet --version
-        dotnet --list-runtimes
         dotnet --list-sdks
+        dotnet --list-runtimes
+        
+    - name: Install sdk and runtime
+      run: bash ./dotnet-install.sh --version 3.0.100-rc1-014190
+    
+    - name: Show dotnet sdks and runtimes
+      run: |
+        dotnet --list-sdks
+        dotnet --list-runtimes
