@@ -24,7 +24,7 @@ jobs:
         
     - name: Install sdk and runtime
       run: |
-        bash ./dotnet-install.sh --version 2.1.202 --install-dir /usr/share/dotnet --verbose
+        sudo bash ./dotnet-install.sh --version 2.1.202 --install-dir /usr/share/dotnet --verbose
     
     - name: Show dotnet sdks and runtimes
       run: |
