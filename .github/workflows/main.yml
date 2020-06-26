@@ -32,3 +32,6 @@ jobs:
         
     - name: ls
       run: ls ~/.dotnet
+    
+    - name: env
+      run: env
