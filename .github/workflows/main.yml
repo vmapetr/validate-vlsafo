@@ -28,6 +28,7 @@ jobs:
     - name: Show dotnet sdks and runtimes
       run: |
         export PATH="$PATH:$HOME/.dotnet"
+        env
         dotnet --version
         dotnet --list-sdks
         dotnet --list-runtimes
