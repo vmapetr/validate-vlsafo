@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -26,9 +26,9 @@ jobs:
     
     - name: Show dotnet sdks and runtimes
       run: |
-        dotnet --version
-        dotnet --list-sdks
-        dotnet --list-runtimes
+        ~/.dotnet/dotnet --version
+        ~/.dotnet/dotnet --list-sdks
+        ~/.dotnet/dotnet --list-runtimes
         
     - name: ls
       run: ls ~/.dotnet
