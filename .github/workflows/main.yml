@@ -11,6 +11,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: ls
+      run: ls ~/.dotnet
+    
     - name: Show dotnet sdks and runtimes
       run: |
         dotnet --version
