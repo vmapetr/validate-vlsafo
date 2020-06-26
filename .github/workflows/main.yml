@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
@@ -18,7 +18,7 @@ jobs:
         dotnet --list-runtimes
         
     - name: Install sdk and runtime
-      run: bash ./dotnet-install.sh --version 2.1.202 --verbose
+      run: sudo bash ./dotnet-install.sh --version 2.1.202 --install-dir /usr/share/dotnet --verbose
     
     - name: Show dotnet sdks and runtimes
       run: |
