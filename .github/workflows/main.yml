@@ -26,9 +26,9 @@ jobs:
     
     - name: Show dotnet sdks and runtimes
       run: |
-        ~/.dotnet/dotnet --version
-        ~/.dotnet/dotnet --list-sdks
-        ~/.dotnet/dotnet --list-runtimes
+        dotnet --version
+        dotnet --list-sdks
+        dotnet --list-runtimes
         
     - name: ls
       run: ls ~/.dotnet
