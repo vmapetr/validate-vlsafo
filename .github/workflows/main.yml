@@ -23,3 +23,6 @@ jobs:
       run: |
         dotnet --list-sdks
         dotnet --list-runtimes
+        
+    - name: path
+      run: echo $path
