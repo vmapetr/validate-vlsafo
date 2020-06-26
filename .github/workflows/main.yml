@@ -13,6 +13,7 @@ jobs:
     
     - name: Show dotnet sdks and runtimes
       run: |
+        dotnet --version
         dotnet --list-sdks
         dotnet --list-runtimes
         
@@ -21,8 +22,9 @@ jobs:
     
     - name: Show dotnet sdks and runtimes
       run: |
+        dotnet --version
         dotnet --list-sdks
         dotnet --list-runtimes
         
     - name: ls
-      run: ls /home/runner/.dotnet
+      run: ls /home/runner/.dotnet/sdk
