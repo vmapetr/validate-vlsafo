@@ -16,11 +16,6 @@ jobs:
         dotnet --version
         dotnet --list-sdks
         dotnet --list-runtimes
-        
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 2.1.201
     
     - name: Setup dotnet
       run: |
