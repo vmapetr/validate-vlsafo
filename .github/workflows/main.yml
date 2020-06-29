@@ -19,8 +19,7 @@ jobs:
     
     - name: Setup dotnet
       run: |
-        bash ./dotnet-install.sh --version 2.1.202
-        source ./dotnet-install.sh
+        source ./dotnet-install.sh --version 2.1.202
         echo $PATH
     
     - name: Show dotnet sdks and runtimes
