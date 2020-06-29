@@ -30,5 +30,6 @@ jobs:
     - name: ls
       run: ls /usr/share/dotnet/sdk
     
-    - name: env
-      run: env
+    - name: PATH
+      run: |
+        echo $PATH
