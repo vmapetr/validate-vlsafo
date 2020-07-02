@@ -6,28 +6,12 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: Show dotnet sdks and runtimes
+    - name: clang cl
       run: |
-        dotnet --version
-        dotnet --list-sdks
-        dotnet --list-runtimes
-    
-    - name: Setup dotnet
-      run: |
-        source ./dotnet-install.sh --version 2.1.202
-        dotnet --version
-    
-    - name: Show dotnet sdks and runtimes
-      run: |
-        export PATH="/home/runner/.dotnet:$PATH"
-        dotnet --version
-        dotnet --list-sdks
+        cmake --version
         
-    - name: PATH
-      run: |
-        echo $PATH
