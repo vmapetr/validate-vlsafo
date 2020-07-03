@@ -11,11 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: downgrade cmake
-      run: |
-        choco install cmake -y --version=3.17.2 --installargs 'ADD_CMAKE_TO_PATH=System'
-        env
-    
     - name: clang cl
       run: |
         cmake --version
@@ -25,7 +20,7 @@ jobs:
       run: |
         Get-ChildItem -Path "C:\msys64\mingw64\bin"
         Write-Host "------"
-        Get-ChildItem -Path "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Tools/Llvm/bin"
+        Get-ChildItem -Path "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC"
         
     - name: env
       run: env
