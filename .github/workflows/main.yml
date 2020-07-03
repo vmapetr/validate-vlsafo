@@ -14,9 +14,7 @@ jobs:
     - name: clang cl
       run: |
         cmake --version
-        cmake --help
-        Write-Host "----"
-        cmake -L
+        cmake --help-full
         
     - name: check
       run: |
