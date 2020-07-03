@@ -13,7 +13,7 @@ jobs:
     
     - name: downgrade cmake
       run: |
-        choco install cmake -y --version=3.8.1 --installargs 'ADD_CMAKE_TO_PATH=""System""'
+        choco install cmake -y --version=3.8.1 --installargs 'ADD_CMAKE_TO_PATH=System'
     
     - name: clang cl
       run: |
