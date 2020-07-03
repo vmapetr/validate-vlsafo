@@ -11,6 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: downgrade cmake
+      run: |
+        choco install cmake -y --version=3.8.1
+    
     - name: clang cl
       run: |
         cmake --version
