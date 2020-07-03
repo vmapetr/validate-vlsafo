@@ -13,7 +13,7 @@ jobs:
     
     - name: clang cl
       run: |
-        cmake --version
+        cmake --help
         
     - name: env
       run: env
