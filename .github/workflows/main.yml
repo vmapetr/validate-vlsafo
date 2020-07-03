@@ -15,6 +15,10 @@ jobs:
       run: |
         cmake --help
         
+    - name: check
+      run: |
+        Get-ChildItem -Path "C:\msys64\mingw64\bin"
+        
     - name: env
       run: env
         
