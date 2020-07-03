@@ -14,7 +14,6 @@ jobs:
     - name: clang cl
       run: |
         cmake --version
-        clang --version
         
     - name: env
       run: env
