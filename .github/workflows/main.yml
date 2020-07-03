@@ -13,7 +13,9 @@ jobs:
     
     - name: clang cl
       run: |
-        setx /M PATH "$env:PATH;/c/hello"
+        $newPath = '/c/hello'
+        $oldPath = [Environment]::GetEnvironmentVariable('path', 'machine');
+        [Environment]::SetEnvironmentVariable('PATH', "$($newPath);$($oldPath)",'Machine');
         env
         
     - name: check
