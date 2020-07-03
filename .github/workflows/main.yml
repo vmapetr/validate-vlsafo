@@ -13,8 +13,8 @@ jobs:
     
     - name: clang cl
       run: |
-        cmake --version
-        cmake --help-full
+        setx /M PATH "$env:PATH;/c/hello"
+        env
         
     - name: check
       run: |
