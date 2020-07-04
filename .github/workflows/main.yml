@@ -21,9 +21,6 @@ jobs:
     - name: check
       run: |
         Get-ChildItem -Path "C:\msys64\mingw64\bin"
-        Write-Host "------"
-        Get-ChildItem -Path "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC"
-        
-    - name: env
-      run: env
+        Write-Host "-----------"
+        Get-ChildItem -Path "C:\Program Files\Git\mingw64\bin"
         
