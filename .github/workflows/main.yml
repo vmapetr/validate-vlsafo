@@ -11,12 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Test
-      run: |
-        $newPath = "C:\msys64\mingw64\bin"
-        echo "##[add-path]C:\msys64\mingw64\bin"
-        $env:path
-        env
+    - name: Add msys to path
+      run: echo "##[add-path]C:\msys64\mingw64\bin"
+    
+    - name: Show path
+      run: $env:path
         
     - name: check
       run: |
