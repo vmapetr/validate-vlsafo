@@ -11,15 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Add msys to path
-      run: echo "##[add-path]C:\msys64\mingw64\bin"
-    
-    - name: Show path
-      run: $env:path
+    - name: Test
+      run: Get-ChildItem "C:\vcpkg"
         
     - name: check
       run: |
-        clang --version
         Write-Host "-----------"
         Get-ChildItem -Path "C:\msys64\mingw64\bin"
         Write-Host "-----------"
