@@ -17,7 +17,6 @@ jobs:
         $oldPath = [Environment]::GetEnvironmentVariable('path', 'machine');
         [Environment]::SetEnvironmentVariable('PATH', "$($newPath);$($oldPath)",'Machine');
         $env:path
-        clang --version
         
     - name: check
       run: |
