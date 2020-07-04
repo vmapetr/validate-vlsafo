@@ -13,10 +13,11 @@ jobs:
     
     - name: clang cl
       run: |
-        $newPath = '/c/hello'
+        $newPath = "C:\msys64\mingw64\bin"
         $oldPath = [Environment]::GetEnvironmentVariable('path', 'machine');
         [Environment]::SetEnvironmentVariable('PATH', "$($newPath);$($oldPath)",'Machine');
-        env
+        $env:path
+        clang --version
         
     - name: check
       run: |
