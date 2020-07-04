@@ -11,12 +11,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: clang cl
+    - name: Test
       run: |
         $newPath = "C:\msys64\mingw64\bin"
-        $oldPath = [Environment]::GetEnvironmentVariable('path', 'machine');
-        [Environment]::SetEnvironmentVariable('PATH', "$($newPath);$($oldPath)",'Machine');
+        echo "::add-path::/c/msys64/mingw64/bin"
         $env:path
+        env
         
     - name: check
       run: |
