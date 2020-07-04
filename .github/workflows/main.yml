@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Test
-      run: Get-ChildItem "C:\vcpkg"
+      run: vcpkg --version
         
     - name: check
       run: |
