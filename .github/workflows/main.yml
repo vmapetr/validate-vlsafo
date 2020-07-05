@@ -13,7 +13,7 @@ jobs:
     
     - name: Test
       run: |
-       vcpkg help
+       vcpkg version
         
     - name: check
       run: |
