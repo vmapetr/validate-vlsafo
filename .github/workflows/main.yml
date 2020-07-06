@@ -13,7 +13,7 @@ jobs:
     
     - name: Install Newman
       run: |
-       brew install newman
+        node --version
         
     - name: Validate Newman
       run: |
