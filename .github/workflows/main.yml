@@ -13,7 +13,11 @@ jobs:
     
     - name: Install Newman
       run: |
+       Get-PSDrive
+       Write-Host "-----"
        npm install -g newman
+       Write-Host "-----"
+       Get-PSDrive
         
     - name: Validate Newman
       run: |
