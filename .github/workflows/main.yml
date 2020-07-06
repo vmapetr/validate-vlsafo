@@ -11,14 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Test
+    - name: Install Newman
       run: |
-       vcpkg version
+       npm install -g newman
         
-    - name: check
+    - name: Validate Newman
       run: |
-        Write-Host "-----------"
-        Get-ChildItem -Path "C:\msys64\mingw64\bin"
-        Write-Host "-----------"
-        Get-ChildItem -Path "C:\Program Files\Git\mingw64\bin"
+        newman --version
         
