@@ -17,5 +17,5 @@ jobs:
         
     - name: Validate Newman
       run: |
-        newman --version
+        Write-Host "Newman $(newman --version)"
         
