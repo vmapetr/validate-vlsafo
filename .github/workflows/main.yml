@@ -6,18 +6,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v2
     
     - name: Install Newman
       run: |
-       Get-PSDrive
-       Write-Host "-----"
-       npm install -g newman
-       Write-Host "-----"
-       Get-PSDrive
+       brew install newman
         
     - name: Validate Newman
       run: |
