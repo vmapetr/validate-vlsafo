@@ -13,7 +13,7 @@ jobs:
     
     - name: Install Newman
       run: |
-       npm install -g newman
+       sudo apt-get install newman
         
     - name: Validate Newman
       run: |
