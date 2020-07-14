@@ -6,14 +6,10 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Install Newman
-      run: |
-        node --version
         
     - name: Validate Newman
       run: |
