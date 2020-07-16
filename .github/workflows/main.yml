@@ -30,7 +30,7 @@ jobs:
     - name: Check pip version
       run: |
         pip --version
-        pip instll --help
+        pip install --help
         pip list
     
     - name: Check pyyaml
