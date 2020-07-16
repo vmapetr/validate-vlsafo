@@ -6,10 +6,14 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Check pyyaml
+      run: |
+        ls /opt/hostedtoolcache/Python
         
     - name: Validate Newman
       run: |
