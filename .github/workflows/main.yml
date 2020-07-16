@@ -27,6 +27,7 @@ jobs:
         pip install "pyyaml==5.1.2"
     
     - name: Check pip version
+      if: ${{ always() }}
       run: |
         pip --version
         pip list
