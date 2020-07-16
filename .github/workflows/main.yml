@@ -11,6 +11,17 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
+    - name: Set up Python 3.7.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7.8
+    
+    - name: Check pip version
+      run: |
+        pip --version
+        pip install --help
+        pip list
+    
     - name: Set up Python 3.7.7
       uses: actions/setup-python@v2
       with:
@@ -19,7 +30,8 @@ jobs:
     - name: Check pip version
       run: |
         pip --version
-        pip --help
+        pip instll --help
+        pip list
     
     - name: Check pyyaml
       run: |
