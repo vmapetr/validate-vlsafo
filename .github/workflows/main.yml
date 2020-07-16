@@ -11,10 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
         
-    - name: Set up Python 3.7.8
+    - name: Set up Python 3.7.7
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7.8
+        python-version: 3.7.7
     
     - name: List installed packages
       run: pip list
@@ -28,12 +28,6 @@ jobs:
       run: |
         pip --version
         pip list
-    
-    - name: Check pyyaml
-      run: |
-        ls /opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages
-        echo "------"
-        ls /opt/hostedtoolcache/Python/3.7.7/x64/lib/python3.7/site-packages
         
     - name: Validate Newman
       run: |
