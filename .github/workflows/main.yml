@@ -27,7 +27,6 @@ jobs:
     
     - name: Install pyyaml 5.2
       run: |
-        pip uninstall -y pyyaml
         pip install "pyyaml==5.2"
     
     - name: Check pip version
