@@ -20,7 +20,7 @@ jobs:
       run: |
         ls /opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages
         echo "------"
-        ls /opt/hostedtoolcache/Python
+        ls /opt/hostedtoolcache/Python/3.7.7/x64/lib/python3.7/site-packages
         
     - name: Validate Newman
       run: |
