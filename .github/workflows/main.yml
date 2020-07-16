@@ -14,6 +14,7 @@ jobs:
     - name: brew
       run: |
         brew --version
+        brew tap aws/tap
         brew install aws-sam-cli
         
     - name: Set up Python 3.7
