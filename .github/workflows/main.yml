@@ -29,6 +29,7 @@ jobs:
     - name: Check pip version
       if: ${{ always() }}
       run: |
+        ls /opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages
         pip --version
         pip list
         
