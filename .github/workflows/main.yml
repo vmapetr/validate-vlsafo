@@ -12,7 +12,9 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: brew
-      run: brew --version
+      run: |
+        brew --version
+        brew install aws-sam-cli
         
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
@@ -24,6 +26,7 @@ jobs:
     
     - name: Install pyyaml 5.2
       run: |
+        pip uninstall -y pyyaml
         pip install "pyyaml==5.2"
     
     - name: Check pip version
