@@ -16,16 +16,14 @@ jobs:
       with:
         python-version: 3.7.8
     
+    - name: Install pyyaml 5.2.1
+      run: |
+        pip install "pyyaml~=5.1.2"
+        
     - name: Check pip version
       run: |
         pip --version
-        pip install --help
         pip list
-    
-    - name: Install pyyaml 5.2.1
-      run: |
-        pip uninstall -y pyyaml
-        pip install "pyyaml~=5.1.2"
     
     - name: Set up Python 3.7.7
       uses: actions/setup-python@v2
@@ -34,20 +32,18 @@ jobs:
     
     - name: Install pyyaml 5.2.1
       run: |
-        pip uninstall -y pyyaml
         pip install "pyyaml~=5.1.2"
     
     - name: Check pip version
       run: |
         pip --version
-        pip install --help
         pip list
     
     - name: Check pyyaml
       run: |
         ls /opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages
         echo "------"
-        ls /opt/hostedtoolcache/Python/3.7.7/x64/lib/python3.7/site-packages/pkg_resources
+        ls /opt/hostedtoolcache/Python/3.7.7/x64/lib/python3.7/site-packages
         
     - name: Validate Newman
       run: |
