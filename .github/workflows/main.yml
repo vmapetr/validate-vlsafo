@@ -22,12 +22,9 @@ jobs:
     - name: List installed packages
       run: pip list
     
-    - name: Install pyyaml 5.2.1
+    - name: Install pyyaml 5.2
       run: |
-        pip uninstall -y pyyaml
         pip install "pyyaml==5.2"
-        pip install "pyyaml==5.1.2"
-        pip install "pyyaml==5.1"
     
     - name: Check pip version
       if: ${{ always() }}
