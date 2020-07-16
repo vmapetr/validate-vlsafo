@@ -10,9 +10,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: ls
-      run: ls /opt/hostedtoolcache/Python
         
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
@@ -29,7 +26,6 @@ jobs:
     - name: Check pip version
       if: ${{ always() }}
       run: |
-        ls /opt/hostedtoolcache/Python/3.7.8/x64/lib/python3.7/site-packages
         pip --version
         pip list
         
