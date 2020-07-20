@@ -19,4 +19,4 @@ python3 setup.py install
 
 echo "-------"
 du -hs /opt/python-aws-sam-cli
-ls /opt/python-aws-sam-cli
+ls $Python3Dir
