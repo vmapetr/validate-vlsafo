@@ -26,7 +26,7 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       run: |
         /opt/python-aws-sam-cli/3.7.7/x64/bin/sam --version
-        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam init
+        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam init --help
     
     - name: Validate Newman
       run: |
