@@ -21,4 +21,5 @@ python3 setup.py install
 
 echo "-------"
 du -hs /opt/python-aws-sam-cli
-ls $Python3BinDir
+echo "AWS sam cli version"
+$Python3BinDir/sam --version
