@@ -29,6 +29,7 @@ jobs:
         /opt/python-aws-sam-cli/3.7.7/x64/bin/sam init --name sam-app --runtime nodejs10.x --dependency-manager npm --app-template hello-world
         cd sam-app
         /opt/python-aws-sam-cli/3.7.7/x64/bin/sam build
+        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam deploy --guided
     
     - name: Validate Newman
       run: |
