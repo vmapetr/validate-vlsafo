@@ -13,7 +13,7 @@ jobs:
     
     - name: Test
       run: |
-        du -h /opt/hostedtoolcache/Python/3.7.8
+        du -hs /opt/hostedtoolcache/Python/3.7.8
       
     - name: Validate Newman
       run: |
