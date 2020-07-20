@@ -10,6 +10,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7.7
       
     - name: Run install
       run: bash ./aws-sam-cli.sh
@@ -17,4 +22,7 @@ jobs:
     - name: Validate Newman
       run: |
        newman --version
+   
+    - name: Pip list
+      run: pip list
         
