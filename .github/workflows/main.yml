@@ -11,31 +11,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: brew
+    - name: Test
       run: |
-        brew --version
-        brew tap aws/tap
-        brew install aws-sam-cli
-        sam --version
-        
-    - name: Set up Python 3.7
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7
-    
-    - name: List installed packages
-      run: pip list
-    
-    - name: Install pyyaml 5.2
-      run: |
-        pip install "pyyaml==5.2"
-    
-    - name: Check pip version
-      if: ${{ always() }}
-      run: |
-        pip --version
-        pip list
-        
+        du -h /opt/hostedtoolcache/Python/3.7.8
+      
     - name: Validate Newman
       run: |
        newman --version
