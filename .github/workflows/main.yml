@@ -13,4 +13,4 @@ jobs:
     
     - name: Test WinRM
       run: |
-        Get-PSDrive
+        winrm get winrm/config
