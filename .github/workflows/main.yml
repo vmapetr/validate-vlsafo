@@ -14,3 +14,4 @@ jobs:
     - name: Test WinRM
       run: |
         winrm --help
+        winrm quickconfig
