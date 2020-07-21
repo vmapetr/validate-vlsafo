@@ -14,6 +14,4 @@ jobs:
     - name: Test WinRM
       run: |
         winrm get winrm/config
-        winrm.cmd set winrm/config/winrs @{MaxMemoryPerShellMB="1024"}
-        Write-Host "-----"
-        winrm get winrm/config
+
