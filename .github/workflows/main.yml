@@ -13,5 +13,4 @@ jobs:
     
     - name: Test WinRM
       run: |
-        winrm --help
-        Enable-PSRemoting -Force
+        Get-PSDrive
