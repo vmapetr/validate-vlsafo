@@ -6,40 +6,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.7.7
-    
-    - name: test
+    - name: Test WinRM
       run: |
-        ls /usr/lib
-        
-    - name: Run install
-      run: bash ./aws-sam-cli.sh
-    
-    - name: Test aws sam cli
-      env:
-        SAM_CLI_TELEMETRY: 0
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      run: |
-        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam --version
-        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam init --name sam-app --runtime nodejs10.x --dependency-manager npm --app-template hello-world
-        cd sam-app
-        /opt/python-aws-sam-cli/3.7.7/x64/bin/sam build
-        echo "-----"
-        cat template.yaml
-    
-    - name: Validate Newman
-      run: |
-       newman --version
-   
-    - name: Pip list
-      run: pip list
-        
+        winrm --help
