@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Test WinRM
+    - name: Test Newman
       run: |
-        winrm get winrm/config
+        newman --version
 
