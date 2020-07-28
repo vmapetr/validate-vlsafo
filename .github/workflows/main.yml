@@ -29,7 +29,6 @@ jobs:
       run: |
         newman --version
         
-    - name: Setup Haskell
     - uses: actions/setup-haskell@v1.1
       with:
         ghc-version: '8.8'
