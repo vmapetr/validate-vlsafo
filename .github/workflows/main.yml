@@ -32,6 +32,9 @@ jobs:
     - uses: actions/setup-haskell@v1.1
       with:
         ghc-version: '8.8'
+        
+    - name: env
+      run: env
 
     - name: Test ghc
       run: |
