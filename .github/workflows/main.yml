@@ -24,6 +24,10 @@ jobs:
     - name: Test Newman
       run: |
         newman --version
+
+    - name: Test ghc
+      run: |
+        ghc --version 
         
   macos:
     runs-on: macos-latest
