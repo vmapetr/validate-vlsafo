@@ -32,7 +32,6 @@ jobs:
       run: |
         ghc --version
         stack --version
-        cabal --version
         
   macos:
     runs-on: macos-latest
