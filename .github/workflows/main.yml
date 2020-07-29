@@ -24,28 +24,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Test Newman
-      run: |
-        newman --version
         
-    - uses: actions/setup-haskell@v1.1
-      with:
-        ghc-version: '8.8'
-        
-    - name: env
-      run: env
-    
-    - uses: actions/setup-haskell@v1.1
-      with:
-        ghc-version: '8.10'
-        
-    - name: env
-      run: env
+    - name: create ghc symlink
+      run: sudo ln -s /opt/ghc/8.10.1/bin/ghc /usr/bin/ghc
 
     - name: Test ghc
       run: |
-        ghc --version 
+        ghc --version
+        stack --version
+        cabal --version
         
   macos:
     runs-on: macos-latest
