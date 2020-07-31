@@ -33,6 +33,10 @@ jobs:
       run: |
         python --version
         pip list
+    
+    - name: install Jinja2
+      run: |
+        pip install Jinja2
         
   macos:
     runs-on: macos-latest
