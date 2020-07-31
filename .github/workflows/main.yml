@@ -11,15 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - uses: action/setup-python@v2
-      with:
-        python--version: 3.7
-    
-    - name: test Python
-      run: |
-        python --version
-        pip list
-    
     - name: Test Newman
       run: |
         newman --version
@@ -34,15 +25,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - uses: actions/setup-haskell@v1.1
+    - uses: action/setup-python@v2
       with:
-        ghc-version: '8.8'
-
-    - name: Test ghc
+        python--version: 3.7
+    
+    - name: test Python
       run: |
-        ghc --version
-        stack --version
-        cabal --version
+        python --version
+        pip list
         
   macos:
     runs-on: macos-latest
