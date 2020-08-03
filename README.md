@@ -3,7 +3,7 @@
    2. World
    
    | Test table |
-   |-|-|
+   |-|
    | Hello | World |
 
 </details>
