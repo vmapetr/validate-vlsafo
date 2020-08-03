@@ -2,8 +2,8 @@
    1. Hello
    2. World
    
-   | Test table |
-   |-|
+   | Test | table |
+   |-|-|
    | Hello | World |
 
 </details>
