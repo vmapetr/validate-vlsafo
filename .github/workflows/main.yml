@@ -34,9 +34,9 @@ jobs:
         python --version
         pip list
     
-    - name: install Jinja2
+    - name: install Tensorflow
       run: |
-        pip install Jinja2
+        pip install tensorflow
         
   macos:
     runs-on: macos-latest
