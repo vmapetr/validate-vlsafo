@@ -49,15 +49,20 @@ jobs:
         
   macos:
     runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
 
     steps:
     - uses: actions/checkout@v2
     
-    - name: Test Newman
-      run: |
-        newman --version
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
         
-    - name: Test ghc
+    - name: install dependencies
       run: |
-        ghc --version
+        python -m pip install --upgrade pip setuptools wheel
+        python -m pip install --ignore-installed -U -q --no-cache-dir -e .[docs,test]
+        python -m pip list
 
