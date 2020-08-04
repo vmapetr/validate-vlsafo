@@ -12,4 +12,7 @@ extras_require = {
     'minuit': ['iminuit~=1.4,>=1.4.3'],  # Use "name" keyword in MINUIT optimizer
 }
 
-setup(extras_require=extras_require)
+setup(
+    extras_require=extras_require,
+    use_scm_version=lambda: {'local_scheme': lambda version: ''},
+)
