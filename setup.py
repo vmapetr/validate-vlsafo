@@ -13,6 +13,5 @@ extras_require = {
 }
 
 setup(
-    extras_require=extras_require,
-    use_scm_version=lambda: {'local_scheme': lambda version: ''},
+    extras_require=extras_require
 )
