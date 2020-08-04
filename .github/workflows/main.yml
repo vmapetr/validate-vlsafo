@@ -38,7 +38,7 @@ jobs:
     - name: install Tensorflow
       run: |
         python -m pip install --upgrade pip setuptools wheel
-        pip install tensorflow
+        python -m pip install tensorflow
         
   macos:
     runs-on: macos-latest
