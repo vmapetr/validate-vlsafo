@@ -52,6 +52,9 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         python -m pip install --ignore-installed -U -q --no-cache-dir -e .[test]
         python -m pip list
+    
+    - name: check free space
+      run: df -h
         
   macos:
     runs-on: macos-latest
@@ -71,4 +74,7 @@ jobs:
         python -m pip install --upgrade pip setuptools wheel
         python -m pip install --ignore-installed -U -q --no-cache-dir -e .[test]
         python -m pip list
+        
+    - name: check free space
+      run: df -h
 
